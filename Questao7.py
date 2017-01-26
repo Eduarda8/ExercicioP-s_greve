@@ -1,19 +1,19 @@
+﻿
 def ValorPagamento(ValorPrestacao, DiasAtraso):
- 
     PercentualMulta = 3
     ValorMulta = (ValorPrestacao * PercentualMulta)/100
- 
     PercentualJurosDias = 0.1
     ValorJurosDia = (ValorPrestacao * PercentualJurosDias)/ 100
- 
     ValorTotalJurosDia = ValorJurosDia * DiasAtraso
     ValorTotal = ValorPrestacao + ValorMulta + ValorTotalJurosDia
- 
     return ValorTotal
- 
-ValorPrestacao = float(input("informe o valor da prestação: "))
-QuantidadePrestacoesPagas = 0
-ValorPrestacoesPagas = 0
+ValorTotalPagamento = ValorPagamento (200, 1)
+print (ValorTotalPagamento )
+
+ValorPrestacao =float(input("informe o valor da prestação :"))
+DiasAtraso = int(input("informe os dias em atraso:"))
+ValorTotalPagamento = ValorPagamento (ValorPrestacao, DiasAtraso) 
+print ("o valor total a ser pago é", ValorTotalPagamento)
  
 while ValorPrestacao!=0:
     QuantidadePrestacoesPagas += 1
